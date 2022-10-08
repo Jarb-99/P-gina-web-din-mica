@@ -1,0 +1,205 @@
+<<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+  function validacion(){
+
+  var formulario_valido = true
+  var nom = document.getElementById("nombre").value
+  if (nom == null || nom.length == 0)
+  {
+    alert("El nombre no puede estar vacio")
+    formulario_valido = false
+  }
+
+  var formulario_valido = true
+  var nom = document.getElementById("apellido").value
+  if (nom == null || nom.length == 0)
+  {
+    alert("El apellido no puede estar vacio")
+    formulario_valido = false
+  }
+
+  var formulario_valido = true
+  var nom = document.getElementById("nacimiento").value
+  if (nom == null || nom.length == 0)
+  {
+    alert("La fecha de nacimiento no puede estar vacio")
+    formulario_valido = false
+  }
+
+  var formulario_valido = true
+  var nom = document.getElementById("ocupacion").value
+  if (nom == null || nom.length == 0)
+  {
+    alert("El perfil no puede estar vacio")
+    formulario_valido = false
+  }
+
+  var formulario_valido = true
+  var nom = document.getElementById("aptitudes").value
+  if (nom == null || nom.length == 0)
+  {
+    alert("Las aptitudes no pueden estar vacia")
+    formulario_valido = false
+  }
+
+  var formulario_valido = true
+  var nom = document.getElementById("telefono").value
+  if (nom == null || nom.length == 0)
+  {
+    alert("El numero telefonico no puede estar vacio")
+    formulario_valido = false
+  }
+
+  var formulario_valido = true
+  var nom = document.getElementById("email").value
+  if (nom == null || nom.length == 0)
+  {
+    alert("El correo electronico no puede estar vacio")
+    formulario_valido = false
+  }
+
+  return formulario_valido
+
+  }
+
+</script>
+
+</head>
+<body>
+
+  <style>
+        
+  legend{
+      border: solid 1px #0000c5;
+      padding: 5px;
+      font-weight: bold;
+      border-radius: 20px;
+      background: #a6daea;
+
+    </style>
+
+  <form method="GET" action= "" onsubmit="return validacion()">
+
+  <fieldset>
+
+    <legend>Información básica</legend>
+    <ul>
+
+      <p><label>Nombres: <input type="text" name="name" id="nombre"></label>
+      <label>Apellidos: <input type="text" name="last_name" id="apellido"></label></p>
+    <p><label>Fecha de nacimiento: <input type="date" name="born" id="nacimiento"></label></p>
+
+    <p><label>Ocupacion: <input type="text" name="occupation" id="ocupacion"></label></p>
+
+    <label for="nacionality">Elige nacionalidad:</label>
+    <select id="nacionality" name="nacionality">
+      <option value="Chile">Chile</option>
+      <option value="Argentina">Argentina</option>
+      <option value="Colombia">Colombia</option>
+      <option value="Ecuador">Ecuador</option>
+      <option value="Venezuela">Venezuela</option>
+      <option value="España">España</option>
+      <option value="Bolivia">Bolivia</option>
+      <option value="Uruguay">Uruguay</option>
+      <option value="Paraguay">Paraguay</option>
+      <option value="Peru">Peru</option>
+    </select>
+
+    </ul>
+  </fieldset>
+  <br/>
+
+  <fieldset>
+
+    <legend>Información extra </legend>
+ 
+    <ul>
+
+    <p>Perfil:<p>
+
+    <textarea id="perfil" name="perfil" rows="perfil" cols="perfil">
+    
+    </textarea>
+
+    <p>Nivel de ingles:</p>
+      <br/>
+
+      <label><input type="radio" name="english_level" value="basico">basico</label>
+
+      <label><input type="radio" name="english_level" value="intermedio">intermedio</label>
+
+      <label><input type="radio" name="english_level" value="avanzado">avanzado</label>
+
+      <label><input type="radio" name="english_level" value="fluido">fluido</label>
+
+      <br/><br/>
+
+      <p>Elige tus lenguajes de programacion:</p>
+
+      <select name="programing_languagues" id="programing_languagues" multiple>
+        <option value="Python">Python</option>
+        <option value="C++">C++</option>
+        <option value="C#">C#</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="php">php</option>
+        <option value="Java">Java</option>
+      </select>
+      <br/><br/>
+
+      <p><label>Elige tus aptitudes: <input type="text" name="aptitudes" list="list_of_aptitudes" id="aptitudes"></label></p>
+
+<datalist id="list_of_aptitudes">
+
+    <select name="aptitudes">
+
+      <option>Inteligencia emocional</option>
+
+      <option>Espiritu critico</option>
+
+      <option>Trabajo en equipo</option>
+
+      <option>Capacidad analitica</option>
+
+      <option>Habilidades fisicas</option>
+
+    </select>
+
+  </label>
+
+</datalist>
+
+    <p>Elige tus habilidades:</p>
+
+   <label><input type="checkbox" name="habilities" value="Acondicionamiento fisico" checked>Acondicionamiento fisico</label><br />
+   <label><input type="checkbox" name="habilities" value="Creacion de videos">Creacion de videos</label><br />
+   <label><input type="checkbox" name="habilities" value="Pack office">Pack office</label><br />
+   <label><input type="checkbox" name="habilities" value="Tenis">Tenis</label><br />
+
+  </ul>
+  </fieldset>
+
+
+  </br>
+  <fieldset>
+
+    <legend>Contacto</legend>
+    <ul>
+
+    <p><label>Número telefónico: <input type="text" name="phone" id="telefono"></label></p>
+
+    <p><label>Correo electronico: <input type="email" name="email" id="email"></label></p>
+
+    </ul>
+  </fieldset>
+  <br/>
+
+    <input type="submit" value="Enviar datos">
+
+  </form>
+
+
+</body>
+</html>
